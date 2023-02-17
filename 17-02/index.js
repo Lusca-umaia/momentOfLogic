@@ -11,13 +11,16 @@ function Troco(Values) {
 
         if (element != 5) {
             if (element == 20) {
-                if (objectNotas['5'] > 2) {
-                    objectNotas['5'] -= 3
-                }
-                else if (objectNotas[5] > 0 && objectNotas[10] > 0) {
+
+                if (objectNotas[5] > 0 && objectNotas[10] > 0) {
                     objectNotas['5'] -= 1
                     objectNotas['10'] -= 1
                 }
+
+                else if (objectNotas['5'] > 2) {
+                    objectNotas['5'] -= 3
+                }
+
                 else {
                     control = 1
                 }
@@ -42,4 +45,4 @@ function Troco(Values) {
     }
 }
 
-Troco([5, 5, 20, 5])
+Troco([5, 5, 5, 10, 20])
